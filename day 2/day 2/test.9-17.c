@@ -1,4 +1,4 @@
-
+#define _CRT_SECURE_NO_WARNINGS 1
 # include <stdio.h> 
 int main ()
 {
@@ -58,7 +58,7 @@ int main()
 	printf("从大到小排序：%d %d %d\n",x,y,z);
 	}
 
-#define _CRT_SECURE_NO_WARNINGS 1
+
 # include <stdio.h> 
 # include <stdlib.h>
 int main ()
