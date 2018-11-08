@@ -1,103 +1,101 @@
-////1.±àĞ´º¯Êı£º 
+////1.ç¼–å†™å‡½æ•°ï¼š 
 ////unsigned int reverse_bit(unsigned int value); 
-////Õâ¸öº¯ÊıµÄ·µ»ØÖµvalueµÄ¶ş½øÖÆÎ»Ä£Ê½´Ó×óµ½ÓÒ·­×ªºóµÄÖµ¡£ 
+////è¿™ä¸ªå‡½æ•°çš„è¿”å›å€¼valueçš„äºŒè¿›åˆ¶ä½æ¨¡å¼ä»å·¦åˆ°å³ç¿»è½¬åçš„å€¼ã€‚ 
 ////
-////Èç£º 
-////ÔÚ32Î»»úÆ÷ÉÏ25Õâ¸öÖµ°üº¬ÏÂÁĞ¸÷Î»£º 
+////å¦‚ï¼š 
+////åœ¨32ä½æœºå™¨ä¸Š25è¿™ä¸ªå€¼åŒ…å«ä¸‹åˆ—å„ä½ï¼š 
 ////00000000000000000000000000011001 
-////·­×ªºó£º£¨2550136832£© 
+////ç¿»è½¬åï¼šï¼ˆ2550136832ï¼‰ 
 ////10011000000000000000000000000000 
-////³ÌĞò½á¹û·µ»Ø£º 
+////ç¨‹åºç»“æœè¿”å›ï¼š 
 ////2550136832 
 ////
-////2.²»Ê¹ÓÃ£¨a+b£©/2ÕâÖÖ·½Ê½£¬ÇóÁ½¸öÊıµÄÆ½¾ùÖµ¡£ 
+////2.ä¸ä½¿ç”¨ï¼ˆa+bï¼‰/2è¿™ç§æ–¹å¼ï¼Œæ±‚ä¸¤ä¸ªæ•°çš„å¹³å‡å€¼ã€‚ 
 ////
-////3.±à³ÌÊµÏÖ£º 
-////Ò»×éÊı¾İÖĞÖ»ÓĞÒ»¸öÊı×Ö³öÏÖÁËÒ»´Î¡£ÆäËûËùÓĞÊı×Ö¶¼ÊÇ³É¶Ô³öÏÖµÄ¡£ 
-////ÇëÕÒ³öÕâ¸öÊı×Ö¡££¨Ê¹ÓÃÎ»ÔËËã£© 
+////3.ç¼–ç¨‹å®ç°ï¼š 
+////ä¸€ç»„æ•°æ®ä¸­åªæœ‰ä¸€ä¸ªæ•°å­—å‡ºç°äº†ä¸€æ¬¡ã€‚å…¶ä»–æ‰€æœ‰æ•°å­—éƒ½æ˜¯æˆå¯¹å‡ºç°çš„ã€‚ 
+////è¯·æ‰¾å‡ºè¿™ä¸ªæ•°å­—ã€‚ï¼ˆä½¿ç”¨ä½è¿ç®—ï¼‰ 
 ////
 ////4. 
-////ÓĞÒ»¸ö×Ö·ûÊı×éµÄÄÚÈİÎª:"student a am i", 
-////ÇëÄã½«Êı×éµÄÄÚÈİ¸ÄÎª"i am a student". 
-////ÒªÇó£º 
-////²»ÄÜÊ¹ÓÃ¿âº¯Êı¡£ 
-////Ö»ÄÜ¿ª±ÙÓĞÏŞ¸ö¿Õ¼ä£¨¿Õ¼ä¸öÊıºÍ×Ö·û´®µÄ³¤¶ÈÎŞ¹Ø£©¡£ 
+////æœ‰ä¸€ä¸ªå­—ç¬¦æ•°ç»„çš„å†…å®¹ä¸º:"student a am i", 
+////è¯·ä½ å°†æ•°ç»„çš„å†…å®¹æ”¹ä¸º"i am a student". 
+////è¦æ±‚ï¼š 
+////ä¸èƒ½ä½¿ç”¨åº“å‡½æ•°ã€‚ 
+////åªèƒ½å¼€è¾Ÿæœ‰é™ä¸ªç©ºé—´ï¼ˆç©ºé—´ä¸ªæ•°å’Œå­—ç¬¦ä¸²çš„é•¿åº¦æ— å…³ï¼‰ã€‚ 
 //
-//
-//#include <stdio.h>
-//#include <stdlib.h>	
-//#include <math.h>	
-//unsigned int reverse_bit(unsigned int value)
-// {  int flag=0;
-//    int sum=0;
-//    int m=31;
-//	while (value)
-//	{   
-//		  flag=value%2;
-//		  value=value/2; 
-//		  sum=sum+pow(2.0,m)*flag;
-//			 m--;  
-//	}
-//return sum;
-//}
-//int main ()
-//{    
-//  unsigned int n=0;
-//  printf ("ÇëËæ»úÊäÈëÒ»¸öÊı×Ö£º ");
-//  scanf ("%d",&n);
-//  printf ("%u\n",reverse_bit( n));
-//  system("pause");
-//  return 0;
-//}
-//
-//
-//
-//#include <stdio.h>
-//#include <stdlib.h>
-//
-// int half (int m,int n)
-// {
-//     return //((m&n)+(m|n))/2;
-//		    (m&n)+(m|n)>>1;
-// }
-//int main ()
-//{
-//  int m=0;
-//  int n=0;
-//  printf ("ÇëÊäÈë2¸öÊı×Ö: ");
-//  scanf ("%d%d",&m,&n);
-//  printf ("%d\n",half (m,n));
-//  system ("pause");
-//  return 0;
-//}
-//
-//
-//#include <stdio.h>
-//#include <stdlib.h>
-//int find_num(int* num,int zs)
-//{
-//  //int i=0;
-//  int t=0;
-// // for (i=0;i<zs;i++)
-//  while (zs)
-//   {  
-//	 t=* num++ ^t;
-//	 zs--;
-//   }
-//  return t;
-//}
-//int main ()
-//{   int ret=0;
-//    int s=0;
-//	int arr[20]={3,5,3,9,5,2,2,7,9,15,7};
-//	s=sizeof arr/sizeof arr[0];
-//	ret=find_num(arr,s);
-//	printf ("%d\n",ret);
-//    system ("pause");
-//}
-//
-//
-//
+
+#include <stdio.h>
+#include <stdlib.h>	
+#include <math.h>	
+unsigned int reverse_bit(unsigned int value)
+ {  int flag=0;
+    int sum=0;
+    int m=31;
+	while (value)
+	{   
+		  flag=value%2;
+		  value=value/2; 
+		  sum=sum+pow(2.0,m)*flag;
+			 m--;  
+	}
+return sum;
+}
+int main ()
+{    
+  unsigned int n=0;
+  printf ("è¯·éšæœºè¾“å…¥ä¸€ä¸ªæ•°å­—ï¼š ");
+  scanf ("%d",&n);
+  printf ("%u\n",reverse_bit( n));
+  system("pause");
+  return 0;
+}
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+ int half (int m,int n)
+{
+    return //((m&n)+(m^n))/2;
+		    (m&n)+(m^n)>>1;
+ }
+int main ()
+{
+  int m=0;
+  int n=0;
+  printf ("è¯·è¾“å…¥2ä¸ªæ•°å­—: ");
+  scanf ("%d%d",&m,&n);
+  printf ("%d\n",half (m,n));
+  system ("pause");
+  return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int find_num(int* num,int zs)
+{
+    int i=0;
+    int t=0;
+ for (i=0;i<zs;i++)
+  while (zs)
+  {  
+	 t=* num++ ^t;
+	 zs--;
+   }
+  return t;
+}
+int main ()
+{   int ret=0;
+    int s=0;
+	int arr[20]={3,5,3,9,5,2,2,7,9,15,7};
+	s=sizeof arr/sizeof arr[0];
+	ret=find_num(arr,s);
+	printf ("%d\n",ret);
+    system ("pause");
+}
+
 # include <stdlib.h>
 #include<stdio.h>
 #include<assert.h>
