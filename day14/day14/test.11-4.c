@@ -4,20 +4,20 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
-void right_rotate ( char *arr,int sz,int k)
-{
-	  int i=0;
-	  k=k%sz;
-	  while (k--)
-   	{  
-	  char temp=arr[sz-1];     //ÓÒĞı
-	  for (i=sz-1;i>0;i--)
-	  {
-		  arr[i]=arr[i-1];
-	  }
-	  arr[i]=temp;
-    }
-}
+//void right_rotate ( char *arr,int sz,int k)
+//{
+//	  int i=0;
+//	  k=k%sz;
+//	  while (k--)
+//   	{  
+//	  char temp=arr[sz-1];     //å³æ—‹
+//	  for (i=sz-1;i>0;i--)
+//	  {
+//		  arr[i]=arr[i-1];
+//	  }
+//	  arr[i]=temp;
+//    }
+//}
 void left_rotate (char *arr,int sz,int k)
 {     
 	  int i=0;
@@ -25,7 +25,7 @@ void left_rotate (char *arr,int sz,int k)
 	  while (k--)
 	{  
 	  char temp=arr[0];
-	  for (i=0;i<sz-1;i++)    //×óĞı
+	  for (i=0;i<sz-1;i++)    //å·¦æ—‹
 	  {
 		  arr[i]=arr[i+1];
 	  }
@@ -36,7 +36,7 @@ int main ()
 { 
   int k=0;
   char arr[]="ABCDEFG";
-  printf ("ÇëÊäÈëÈÎÒâÊı×Ö£º ");
+  printf ("è¯·è¾“å…¥ä»»æ„æ•°å­—ï¼š ");
   scanf ("%d",&k);
   left_rotate (arr,(sizeof arr/sizeof arr[0]-1),k);
   printf ("%s\n",arr);
@@ -52,45 +52,45 @@ int main ()
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
-int is_rotate (char *str1 ,char *str2)            //ÅĞ¶Ï×Ö·û´®ÊÇ·ñÏàµÈº¯Êı
+int is_rotate (char *str1 ,char *str2)            //åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ç›¸ç­‰å‡½æ•°
 {
 	if(strcmp (str1,str2)==0)
 		return 1;
 	else
 		return 0;
 }
-//int right_rotate (char*str1, char *str2,int sz)      //ÓÒĞıº¯Êı
+//int right_rotate (char*str1, char *str2,int sz)      //å³æ—‹å‡½æ•°
 //{
 //	  int i=0;
 //	  int p=sz;
 //	  int ret=0;
-//	  while (p--)               //ÒÔ×Ö·û´®³¤¶È½øĞĞÓÒĞı×ª
+//	  while (p--)               //ä»¥å­—ç¬¦ä¸²é•¿åº¦è¿›è¡Œå³æ—‹è½¬
 //   	{  
-//	  char temp=str2[sz-1];     //°Ñ×îºóÒ»¸ö×Ö·û´®Ã¿´ÎÏÈ±£´æÏÂÀ´
+//	  char temp=str2[sz-1];     //æŠŠæœ€åä¸€ä¸ªå­—ç¬¦ä¸²æ¯æ¬¡å…ˆä¿å­˜ä¸‹æ¥
 //	  for (i=sz-1;i>0;i--)
 //	  {
-//		  str2[i]=str2[i-1];          //Ê¹×Ö·û´®ÒÀ´ÎºóÒÆ
+//		  str2[i]=str2[i-1];          //ä½¿å­—ç¬¦ä¸²ä¾æ¬¡åç§»
 //	  }
-//	  str2[i]=temp;            //°Ñ±£´æµÄÄÚÈİ¸³¸øÇ°±ß¿ÕÁËµÄÏÂ±êÖĞ
-//	  ret=is_rotate (str1,str2);   //µ÷ÓÃ×Ö·û´®£¬Ã¿´ÎĞı×ªºó½øĞĞ±È½Ï
-//	  if (ret)                     //Èç¹ûÏàµÈ¾Í·µ»Ø1£¬·ñÔò·µ»Ø0
+//	  str2[i]=temp;            //æŠŠä¿å­˜çš„å†…å®¹èµ‹ç»™å‰è¾¹ç©ºäº†çš„ä¸‹æ ‡ä¸­
+//	  ret=is_rotate (str1,str2);   //è°ƒç”¨å­—ç¬¦ä¸²ï¼Œæ¯æ¬¡æ—‹è½¬åè¿›è¡Œæ¯”è¾ƒ
+//	  if (ret)                     //å¦‚æœç›¸ç­‰å°±è¿”å›1ï¼Œå¦åˆ™è¿”å›0
 //	  break;
 //	}
 //	  return ret;
 //}
-int left_rotate (char* str1,char *str2,int sz)   //×óĞıº¯Êı
+int left_rotate (char* str1,char *str2,int sz)   //å·¦æ—‹å‡½æ•°
 {     int p=sz;
 	  int i=0;
 	  int ret=0;
 	  while (p--)
 	{  
-	  char temp=str2[0];          //°ÑÊ××Ö·û´®Ã¿´ÎÏÈ±£´æÏÂÀ´
+	  char temp=str2[0];          //æŠŠé¦–å­—ç¬¦ä¸²æ¯æ¬¡å…ˆä¿å­˜ä¸‹æ¥
 	  for (i=0;i<sz-1;i++)    
 	  {
-		  str2[i]=str2[i+1];       //Ê¹×Ö·û´®ÒÀ´ÎÇ°ÒÆ
+		  str2[i]=str2[i+1];       //ä½¿å­—ç¬¦ä¸²ä¾æ¬¡å‰ç§»
 	  }
-	  str2[i]=temp;           //°Ñ±£´æµÄÄÚÈİ¸³¸øºó±ß¿ÕÁËµÄÏÂ±êÖĞ
-	 ret= is_rotate (str1,str2);       //µ÷ÓÃ×Ö·û´®£¬Ã¿´ÎĞı×ªºó½øĞĞ±È½Ï
+	  str2[i]=temp;           //æŠŠä¿å­˜çš„å†…å®¹èµ‹ç»™åè¾¹ç©ºäº†çš„ä¸‹æ ‡ä¸­
+	 ret= is_rotate (str1,str2);       //è°ƒç”¨å­—ç¬¦ä¸²ï¼Œæ¯æ¬¡æ—‹è½¬åè¿›è¡Œæ¯”è¾ƒ
 	  if (ret)
 	 break;
     }
@@ -106,13 +106,13 @@ int main ()
 	//ret2=right_rotate (string1,string2,(sizeof string1/sizeof string1[0]-1));
 	//printf ("%d\n",ret2);
 	if (ret1)
-	    printf("×Ö·û´®str2ÊÇ¾­¹ı×Ö·û´®str1Ğı×ªµÄ\n");
+	    printf("å­—ç¬¦ä¸²str2æ˜¯ç»è¿‡å­—ç¬¦ä¸²str1æ—‹è½¬çš„\n");
 	else
-		printf("×Ö·û´®str2²»ÊÇ¾­¹ı×Ö·û´®str1Ğı×ªµÄ\n");
+		printf("å­—ç¬¦ä¸²str2ä¸æ˜¯ç»è¿‡å­—ç¬¦ä¸²str1æ—‹è½¬çš„\n");
 	/*if (ret2)
-	    printf("×Ö·û´®str2ÊÇ¾­¹ı×Ö·û´®str1Ğı×ªµÄ\n");
+	    printf("å­—ç¬¦ä¸²str2æ˜¯ç»è¿‡å­—ç¬¦ä¸²str1æ—‹è½¬çš„\n");
 	else
-		printf("×Ö·û´®str2²»ÊÇ¾­¹ı×Ö·û´®str1Ğı×ªµÄ\n");*/
+		printf("å­—ç¬¦ä¸²str2ä¸æ˜¯ç»è¿‡å­—ç¬¦ä¸²str1æ—‹è½¬çš„\n");*/
 	system ("pause");
 	return 0;
 

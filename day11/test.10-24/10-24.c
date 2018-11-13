@@ -7,6 +7,7 @@ int main()
 	int C=0;
 	int D=0;
 	int E=0;
+	int flag=0;
 	for (A = 1; A <= 5; A++)
 	{
 		for (B = 1; B <= 5; B++)
@@ -16,14 +17,35 @@ int main()
 				for (D = 1; D <= 5; D++)
 				{
 					for (E = 1; E <= 5; E++)
-					{
+					{    
+						flag=0;
 						if (((B==2)^(A==3)) && ((B==2)^(E==4))\
 						    && ((C==1)^(D==2)) && ((C==5)^(D==3))
 						    && ((E==4)^(A==1)))
-							------------------------------------------------
+						
+							{
+							flag|=(1<<(A-1));
+							flag|=(1<<(B-1));
+							flag|=(1<<(C-1));
+							flag|=(1<<(D-1));
+							flag|=(1<<(E-1));
+							//if (flag==1||flag==3||flag==7||flag==15||flag==31)
+							while (flag)
+							{
+							  if(!(flag&1))
+								  break;
+							  else
+								  flag>>=1;
+							  if(flag==0)
+
+							printf("A=%d, B=%d, C=%d, D=%d, E=%d\n", A, B, C, D, E);
 							
+							}
+
+							//printf("A=%d, B=%d, C=%d, D=%d, E=%d\n", A, B, C, D, E);
+						}
 							
-							printf("A=%d, B=%d, C=%d, D=%d, E=%d\n", A, B, C, D, E);					
+												
 					}
 				}
 			}
@@ -49,6 +71,17 @@ system ("pause");
 return 0;
 }
 
+int main ()
+{
+	char killer='A';
+	for (killer='A';killer<='D';killer++)
+	{
+	  if ((killer!='A')+(killer=='C')+(killer=='D')+(killer!='D')==3)
+	     printf ("%c is killer\n",killer);
+	}
+system ("pause");
+return 0;
+}
 
 
 //方法二
@@ -67,9 +100,13 @@ int main ()
 				for (D = 0; D <2; D++)
 				{
 					if (
-						((A==0 && C==1 && D==1 && D==1) | (A==0 && C==1 && D==0 && D==0) | (A==0 && C==0 && D==1 && D==0) | (A==1 && C==1 && D==1 && D==0)) &&
-						((A==1&&B==0&&C==0&&D==0)|(A==0&&B==1&&C==0&&D==0)|(A==0&&B==0&&C==1&&D==0)|(A==0&&B==0&&C==0&&D==1))
-						)
+						((A==0 && C==1 && D==1 && D==1) |\
+						 (A==0 && C==1 && D==0 && D==0) | \
+						 (A==0 && C==0 && D==1 && D==0) | \
+						 (A==1 && C==1 && D==1 && D==0)) &&
+						((A==1&&B==0&&C==0&&D==0)|(A==0&&B==1&&C==0&&D==0)|\
+						 (A==0&&B==0&&C==1&&D==0)|(A==0&&B==0&&C==0&&D==1))
+					     )
 						printf ("A=%d, B=%d, C=%d, D=%d\n",A,B,C,D);
 				}
 			}
