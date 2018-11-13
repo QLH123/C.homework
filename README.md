@@ -192,3 +192,17 @@ day 15
 3.模拟实现strcpy
 
 4.模拟实现strcat
+
+
+
+day 16
+
+1.实现strstr 
+
+2.实现strchr
+
+3.实现strcmp 
+
+4.实现memcpy
+
+5.实现memmove
