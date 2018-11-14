@@ -199,9 +199,9 @@ day 16
 
 1.实现strstr 
 
-2.实现strchr
+2.实现strcmp
 
-3.实现strcmp 
+3.实现strchr 
 
 4.实现memcpy
 
