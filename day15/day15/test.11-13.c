@@ -40,7 +40,7 @@ int main ()
 		k=money%2;
 	    money=money/2;
 	}
-	printf ("���Ժ�%dƿˮ\n",count);
+	printf ("¿ÉÒÔºÈ%dÆ¿Ë®\n",count);
 	system ("pause");
 	return 0;
 }
@@ -48,14 +48,15 @@ int main ()
 
 
 char* mystrcpy (char *des, const char * sour)
-{   
+{       
+	char*p=des;
 	 assert(sour);
 	 assert(des);
 	 while (* des++=*sour++)
 	 {
 	     ;
 	 }
-	 return des;
+	 return p;  //会发生指向错误，des再循环时指向发生变化
 }
 int main ()
 {
@@ -70,7 +71,7 @@ int main ()
 
 
 char* mystrcat (char *des, const char * sour)
-{    
+{       char*p=des;
 	 assert(sour);
 	 assert(des);
 	 while (*des)
@@ -82,7 +83,7 @@ char* mystrcat (char *des, const char * sour)
 		 des++;
 		 sour++;
 	 }
-	 return des;
+	 return p;
 }
 int main ()
 {
