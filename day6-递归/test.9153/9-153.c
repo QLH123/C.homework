@@ -11,9 +11,9 @@
 		return  fib (m-1)+fib (m-2);
 	
 }
-int main ()   //ì³²¨ÄÇÆõÊıÁĞµİ¹éĞÎÊ½
+int main ()   //æ–æ³¢é‚£å¥‘æ•°åˆ—é€’å½’å½¢å¼
 {   int n=0;
-    printf ("ÊäÈëÊı×Ön: ");
+    printf ("è¾“å…¥æ•°å­—n: ");
 	scanf ("%d",&n);
 	printf ("%d\n",fib(n));
 	system ("pause");
@@ -30,7 +30,7 @@ int main ()
 	int c=0;
 	int i=0;
 	int n=0;
-printf ("ÊäÈëÊı×Ön: ");
+printf ("è¾“å…¥æ•°å­—n: ");
 scanf ("%d",&n);
 for (i=0;i<n;i++)
 {   a=b;
@@ -52,7 +52,7 @@ int power (int n,int k)
 	return 1;
 }
 int main ()
-{              //´Î·½
+{              //æ¬¡æ–¹
 	int n=0;
 	int k=0;
 	int rel=0;
@@ -76,11 +76,11 @@ int DigitSum (int t)
 	}
    return t;
 }
-int main()   //Êı×ÖÎ»ÊıÖ®ºÍ
+int main()   //æ•°å­—ä½æ•°ä¹‹å’Œ
 {
 	int a=0;
 	int sum=0;
-	printf("ÇëÊäÈëÒ»¸öÊı:  ");
+	printf("è¯·è¾“å…¥ä¸€ä¸ªæ•°:  ");
 	scanf("%d",&a);
 	sum=DigitSum (a);
 	printf("%d\n",sum);
@@ -96,7 +96,7 @@ void reverse_string (char* num)
 		if (* num!='\0')
     	{ 
 			reverse_string (num+1);
-			printf ("%c",* num);   //µİ¹éÊµÏÖ×Ö·û´®ÖĞ×Ö·û·´ÏòÅÅÁĞ
+			printf ("%c",* num);   //é€’å½’å®ç°å­—ç¬¦ä¸²ä¸­å­—ç¬¦åå‘æ’åˆ—
 		}
 		else
 			printf ("%c",*num);
@@ -110,6 +110,7 @@ return 0;
 }
 
 
+//æ–¹æ³•ä¸€ï¼š
 # include <stdio.h>
 # include <stdlib.h>
 int strlen (char* num)
@@ -117,7 +118,7 @@ int strlen (char* num)
 { if (*num!='\0')
 	return (1+strlen(num+1));
 	}
-return 0;       //strlenº¯Êı
+return 0;       //strlenå‡½æ•°
 }
 int main()
 {  char arr[]="2kjhhlh56hjk345";
@@ -127,6 +128,7 @@ int main()
 return 0;
 }
 
+//æ–¹æ³•äºŒï¼š
 # include <stdio.h>
 # include <stdlib.h>
 int main()
@@ -140,6 +142,29 @@ printf("%d\n",count);
 system("pause");
 return 0;
 }
+//æ–¹æ³•ä¸‰ï¼š
+    # include <stdio.h>
+     # include <stdlib.h>
+     # include <assert.h>
+	int strlen (char* num)     
+	{  
+		char* p= num;
+		assert(num!=NULL);
+		while (*p!='\0')
+		{ 
+		 p++;
+		}
+	return p-num;       
+	}
+	int main()
+	{  char arr[]="2kjhhlh56hjk345";      
+	int str=strlen (arr);           
+	printf("%d\n",str);         
+	system("pause");
+	return 0;
+	}
+
+
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -150,11 +175,11 @@ int  factorial(int n)
     }
 	return 1;
 	}
-int main ()  // ½×³Ëµİ¹é
+int main ()  // é˜¶ä¹˜é€’å½’
 	{
 	int m=0;
 	int ret=0;
-	printf ("ÇëÊäÈëËæÒâÒ»¸ö·Ç¸ºÕûÊı£º");
+	printf ("è¯·è¾“å…¥éšæ„ä¸€ä¸ªéè´Ÿæ•´æ•°ï¼š");
 	scanf ("%d",&m);
 	ret=factorial (m);
 	printf ("%d\n",ret);
@@ -169,7 +194,7 @@ int main ()
 	int n=0;
 	int i=0;
 	int sum=1;
-	printf ("ÇëÊäÈëËæÒâÒ»¸ö·Ç¸ºÕûÊı£º");
+	printf ("è¯·è¾“å…¥éšæ„ä¸€ä¸ªéè´Ÿæ•´æ•°ï¼š");
 	scanf ("%d",&n);
 	for (i=1;i<=n;i++)
 	{
@@ -190,10 +215,10 @@ int  print (int n)
     }
 printf ("%d ",n%10);
 }
-int main ()   //´òÓ¡×Ö·û
+int main ()   //æ‰“å°å­—ç¬¦
 	{
 	int m=0;
-	printf ("ÇëÊäÈëËæÒâÒ»¸ö·Ç¸ºÕûÊı£º");
+	printf ("è¯·è¾“å…¥éšæ„ä¸€ä¸ªéè´Ÿæ•´æ•°ï¼š");
 	scanf ("%d",&m);
 	print (m);
 	system ("pause");
