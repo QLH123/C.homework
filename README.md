@@ -173,3 +173,12 @@ day18
 2.练习使用qsort函数排序各种类型的数据。
 
 3.模仿qsort的功能实现一个通用的冒泡排序。
+
+
+day 19
+
+1.模拟实现strncpy 
+
+2.模拟实现strncat 
+
+3.模拟实现strncmp 
